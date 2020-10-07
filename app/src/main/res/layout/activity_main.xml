@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBF5FB "
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="ODADING MANG OLEH"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textColor="#7B241C"
+        android:textSize="25dp"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTE MO BELI BERAPA ?"
+        android:textSize="20dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp1.000 / Biji"
+        android:textSize="18dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="+"
+        android:background="#85C1E9"
+        android:textSize="25dp"
+        android:paddingTop="1dp"
+        android:paddingLeft="1dp"
+        android:onClick="increment"/>
+
+    <TextView
+        android:id="@+id/jumlah_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 Biji"
+        android:textStyle="bold"
+        android:textColor="#F4D03F"
+        android:textSize="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"/>
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_marginLeft="16dp"
+        android:background="#85C1E9"
+        android:textSize="25dp"
+        android:paddingTop="1dp"
+        android:paddingLeft="1dp"
+        android:onClick="decrement"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL ENTE BAYAR"
+        android:textSize="20dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/harga_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp0"
+        android:textStyle="bold"
+        android:textColor="#58D68D"
+        android:textSize="25dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"/>
+
+    <Button
+        android:onClick="submitOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BAYAR"
+        android:textColor="#F0F3F4"
+        android:layout_marginLeft="16dp"
+        android:background="#58D68D"
+        android:textSize="20dp"
+        android:paddingTop="1dp"
+        android:paddingLeft="1dp"/>
+
+</LinearLayout>
