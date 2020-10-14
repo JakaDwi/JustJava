@@ -30,7 +30,16 @@ int jumlah = 0;
         }
     }
     public void submitOrder(View view) {
-        displayHarga(jumlah * 1000);
+        int price = jumlah * 1000;
+        String priceMessage = "Segini niih";
+        priceMessage = priceMessage + "\nRp "+ price;
+        priceMessage = priceMessage + "\nNuhuuuunn";
+        displayMessage(priceMessage);
+    }
+
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.harga_text_view);
+        priceTextView.setText(message);
     }
 
     private void display(int number) {

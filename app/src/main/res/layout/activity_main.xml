@@ -36,40 +36,46 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"/>
 
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:text="+"
-        android:background="#85C1E9"
-        android:textSize="25dp"
-        android:paddingTop="1dp"
-        android:paddingLeft="1dp"
-        android:onClick="increment"/>
+        android:orientation="horizontal">
+        
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginLeft="16dp"
+            android:background="#85C1E9"
+            android:textSize="25dp"
+            android:paddingTop="1dp"
+            android:paddingLeft="1dp"
+            android:onClick="decrement"/>
 
-    <TextView
-        android:id="@+id/jumlah_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0 Biji"
-        android:textStyle="bold"
-        android:textColor="#F4D03F"
-        android:textSize="20dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:paddingLeft="16dp"/>
+        <TextView
+            android:id="@+id/jumlah_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 Biji"
+            android:textStyle="bold"
+            android:textColor="#F4D03F"
+            android:textSize="20dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"/>
 
-    <Button
-        android:id="@+id/minus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:layout_marginLeft="16dp"
-        android:background="#85C1E9"
-        android:textSize="25dp"
-        android:paddingTop="1dp"
-        android:paddingLeft="1dp"
-        android:onClick="decrement"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="+"
+            android:background="#85C1E9"
+            android:textSize="25dp"
+            android:paddingTop="1dp"
+            android:paddingLeft="1dp"
+            android:onClick="increment"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
