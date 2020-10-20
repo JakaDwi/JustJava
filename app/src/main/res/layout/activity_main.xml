@@ -43,7 +43,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rp2.000 / Biji"
+        android:text="Rp 2.000 / Biji"
         android:textSize="18dp"
         android:paddingTop="1dp"
         android:paddingBottom="16dp"
@@ -107,6 +107,15 @@
         android:paddingLeft="16dp"
         android:id="@+id/saus_checkbox"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp 1.000"
+        android:textSize="16dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"/>
+
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -115,6 +124,15 @@
         android:paddingTop="16dp"
         android:paddingLeft="16dp"
         android:id="@+id/gula_checkbox"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp 500"
+        android:textSize="16dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"/>
 
     <TextView
         android:layout_width="wrap_content"
