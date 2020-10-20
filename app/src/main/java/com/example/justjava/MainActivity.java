@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,6 +14,8 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 int jumlah = 0;
+EditText namaEditText;
+String nama;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +34,38 @@ int jumlah = 0;
         }
     }
     public void submitOrder(View view) {
-        int price = jumlah * 1000;
-        String priceMessage = "Segini niih";
-        priceMessage = priceMessage + "\nRp "+ price;
-        priceMessage = priceMessage + "\nNuhuuuunn";
+        CheckBox sausCheckbox = (CheckBox) findViewById(R.id.saus_checkbox);
+        CheckBox gulaCheckbox = (CheckBox) findViewById(R.id.gula_checkbox);
+        namaEditText = (EditText) findViewById(R.id.edit_nama);
+
+        boolean hassaus = sausCheckbox.isChecked();
+        boolean hasgula = gulaCheckbox.isChecked();
+        nama = namaEditText.getText().toString();
+
+        int price = calculatePrice(hassaus, hasgula);
+
+        String priceMessage = "Segini niih...\n";
+        priceMessage = priceMessage + "\nJumlah Pembelian: "+ jumlah + " Biji" +
+                        "\nSaus: " + hassaus +
+                        "\nGula: " + hasgula +
+                        "\nTotal Pembelian Rp: "+ price +
+                        "\n\nNuhuuuun, " + nama;
+
         displayMessage(priceMessage);
     }
+
+    private int calculatePrice(boolean addhassaus, boolean addhasgula) {
+        int hargaawal = 2000;
+        int harga = 0;
+
+        if(addhassaus){
+            hargaawal = hargaawal + 1000;
+        }
+        if(addhasgula){
+            hargaawal = hargaawal + 500;
+        }
+        return harga = jumlah * hargaawal;
+}
 
     private void displayMessage(String message) {
         TextView priceTextView = (TextView) findViewById(R.id.harga_text_view);
